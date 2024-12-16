@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <title>Controle</title>
+</head>
+
+<body>
+  <main>
+    <form id="controleForm">
+      <legend>Controle de Itens</legend>
+      <div class="segurar">
+        <div class="identificacao">
+          <p>
+            <label for="turma">Turma</label>
+            <input type="number" id="turma" placeholder="Digite o número da sua turma" required min="11" max="20" />
+          </p>
+          <p>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+          </p>
+          <p>
+            <label for="posto">Posto</label>
+            <input type="number" id="posto" placeholder="Digite seu posto" required min="1" max="20" />
+          </p>
+          <p>
+            <label for="controle_hora">Controle de hora</label>
+            <input type="text" id="controle_hora" placeholder="O item sumiu no turno anterior?" required />
+          </p>
+        </div>
+        <div>
+          <p>
+            <label for="item1">Item 1</label>
+            <input type="text" id="item1" placeholder="Digite o 1° item que sumiu" required />
+          </p>
+          <p>
+            <label for="item2">Item 2</label>
+            <input type="text" id="item2" placeholder="Digite o 2° item que sumiu" />
+          </p>
+          <p>
+            <label for="item3">Item 3</label>
+            <input type="text" id="item3" placeholder="Digite o 3° item que sumiu" />
+          </p>
+          <p>
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="Tem alguma anotação relevante?" />
+          </p>
+        </div>
+      </div>
+      <button type="submit" id="btn_submit">Enviar</button>
+    </form>
+  </main>
+
+  <script>
+    document.getElementById('controleForm').addEventListener('submit', function (e) {
+      const item1 = document.getElementById('item1').value.trim();
+      if (!item1) {
+        alert("É obrigatório preencher pelo menos o campo 'Item 1'.");
+        e.preventDefault(); 
+      }
+    });
+  </script>
+  <script src="src/script.js"></script>
+</body>
+</html>

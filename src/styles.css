@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body {
+    background-color: #d2dbd9;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 600px;
+    margin-top: 11%;
+}
+
+form {
+    width: 1050px;
+    height: 800px;
+    border-radius: 25px;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+
+    .segurar{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        .identificacao{
+            width: 20%;
+        }
+    }
+
+    legend {
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    P {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+
+        input {
+            border: none;
+            background-color: #cccccc49;
+            padding-left: 20px;
+            width: 270px;
+            height: 40px;
+            border-radius: 10px;
+        }
+        #descricao {
+            height: 100px;
+        }
+        #descricao::placeholder {
+            text-align: left;
+        }
+
+        input:focus{
+            outline: 2px solid #ec181f;
+         }
+         label{
+            margin-top: 10px;
+         }
+    }
+    button {
+        width: 270px;
+        height: 45px;
+        border: none;
+        border-radius: 8px;
+        font-size: 25px;
+        color: white;
+        background-color: #ec181f;
+        margin-bottom: 5%;
+        transition: 0.6s;
+    }
+    button:hover {
+        width: 300px;
+        height: 65px;
+        transition: 1s all;
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        border: 2px solid #ec181f;
+    }
+    select {
+        border: none;
+        background-color: #cccccc49;
+        padding-left: 20px;
+        width: 270px;
+        height: 40px;
+        border-radius: 2px;
+        font-size: 16px;
+        color: #000;
+        appearance: none; 
+        outline: none;
+    }
+    
+    select:focus {
+        outline: 2px solid #ec181f;
+    }
+    
+    select option {
+        font-size: 16px;
+        color: #000;
+    } 
+    select option:hover {
+        background-color: #ec181f;
+        color: white;
+    }       
+}
