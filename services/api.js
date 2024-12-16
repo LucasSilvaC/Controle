@@ -1,5 +1,5 @@
 const api = axios.create({
-    baseURL: 'https://bugcode-three.vercel.app/'
+    baseURL: 'https://controle-puce.vercel.app'
 });
 
 export default api;
